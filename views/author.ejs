@@ -73,12 +73,12 @@
           <div class="left_2">
             <div class="left_2-general-info">
               <div class="left_age">Age:</div>
-              <span>24</span>
+              <span><%=user.age%></span>
             </div>
 
             <div class="left_2-general-info">
               <div class="left_residence">Residence:</div>
-              <span>BD</span>
+              <span><%=user.residence%></span>
             </div>
 
             <div class="left_2-general-info">
@@ -88,7 +88,7 @@
 
             <div class="left_2-general-info">
               <div class="left_address">Address:</div>
-              <span>Dhaka,Bangladesh</span>
+              <span><%=user.address%></span>
             </div>
           </div>
           <div class="marginer"></div>
@@ -96,7 +96,7 @@
             <div class="left_languages"><span>Languages</span></div>
             <div class="left_language">
               <div class="left_lang_1">
-                <span>Bangla</span>
+                <span><%=user.Languages[0]%></span>
                 <span>100%</span>
               </div>
 
@@ -105,7 +105,7 @@
 
             <div class="left_language">
               <div class="left_lang_1">
-                <span>English</span>
+                <span><%=user.Languages[1]%></span>
                 <span>80%</span>
               </div>
 
@@ -114,7 +114,7 @@
 
             <div class="left_language">
               <div class="left_lang_1">
-                <span>Spanish</span>
+                <span><%=user.Languages[2]%></span>
                 <span>60%</span>
               </div>
 
@@ -127,7 +127,7 @@
             <div class="left_skills"><span>Skills</span></div>
             <div class="left_skill">
               <div class="left_skill_1">
-                <span>HTML</span>
+                <span><%=user.skills[0]%></span>
                 <span>90%</span>
               </div>
 
@@ -136,7 +136,7 @@
 
             <div class="left_skill">
               <div class="left_skill_1">
-                <span>CSS</span>
+                <span><%=user.skills[1]%></span>
                 <span>85%</span>
               </div>
 
@@ -145,7 +145,7 @@
 
             <div class="left_skill">
               <div class="left_skill_1">
-                <span>JS</span>
+                <span><%=user.skills[2]%></span>
                 <span>80%</span>
               </div>
 
@@ -154,7 +154,7 @@
 
             <div class="left_skill">
               <div class="left_skill_1">
-                <span>PHP</span>
+                <span><%=user.skills[3]%></span>
                 <span>75%</span>
               </div>
 
@@ -163,7 +163,7 @@
 
             <div class="left_skill">
               <div class="left_skill_1">
-                <span>WordPress</span>
+                <span><%=user.skills[4]%></span>
                 <span>85%</span>
               </div>
 
@@ -175,22 +175,22 @@
             <div class="left_extra_skills"><span>Extra Skills</span></div>
             <div class="left_extra_skill">
               <img src="images/extra_skill_icon.png" alt="" />
-              <span>Bootstrap, Materialize</span>
+              <span><%=user.extra_skills[0]%></span>
             </div>
 
             <div class="left_extra_skill">
               <img src="images/extra_skill_icon.png" alt="" />
-              <span>Stylus, Sass, Less</span>
+              <span><%=user.extra_skills[1]%></span>
             </div>
 
             <div class="left_extra_skill">
               <img src="images/extra_skill_icon.png" alt="" />
-              <span>Gulp, Webpack, Grunt</span>
+              <span><%=user.extra_skills[2]%></span>
             </div>
 
             <div class="left_extra_skill">
               <img src="images/extra_skill_icon.png" alt="" />
-              <span>GIT Knowledge</span>
+              <span><%=user.extra_skills[3]%></span>
             </div>
           </div>
           <div class="marginer"></div>
