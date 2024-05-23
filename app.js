@@ -1,8 +1,10 @@
 console.log("I am just checking whether it is working or not");
 const express = require("express");
 const app = express();
-const http = require("http");
 const fs = require("fs");
+
+// MongoDb call
+const db = require("./server").db();
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -38,10 +40,4 @@ app.get("/", function (req, res) {
   res.render("reja");
 });
 
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function () {
-  console.log(
-    `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`
-  );
-});
+module.exports = app;
