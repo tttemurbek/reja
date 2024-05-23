@@ -21,7 +21,7 @@
         <div class="d-flex align-items-center">
           <input
             type="text"
-            name="item"
+            name="reja"
             id="create-field"
             autofocus
             autocomplete="off"
@@ -35,11 +35,31 @@
       </form>
     </div>
 
-    <button
-      type="button"
-      class="btn btn-danger"
-      style="margin-left: 150px"
-    >
+    <ul id="item-list" class="list-group pb-5">
+      <% items.map(function(item) { %>
+      <li
+        class="list-group-item list-group-info d-flex align-items-center justify-content-between"
+      >
+        <span class="item-text"><%=item.reja %></span>
+        <div>
+          <button
+            data-id="<%=item._id%>"
+            class="edit-me btn btn-secondary btn-sm mr-1"
+          >
+            Edit
+          </button>
+          <button
+            data-id="<%=item._id%>"
+            class="delete-me btn btn-danger btn-sm"
+          >
+            Delete
+          </button>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+
+    <button type="button" class="btn btn-danger" style="margin-left: 150px">
       Hamma rejalarni o'chirish
     </button>
   </body>
