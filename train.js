@@ -4,7 +4,11 @@ function countDigits(x) {
   let count = 0;
 
   for (let i = 0; i < x.length; i++) {
-    if (x[i] >= "0" && x[i] <= "9") {
+    // if (x[i] >= "0" && x[i] <= "9") {
+    //   count++;
+    // }
+
+    if (x[i] >= 0 && x[i] <= 9) {
       count++;
     }
   }
@@ -12,7 +16,7 @@ function countDigits(x) {
   return count;
 }
 
-const count = countDigits("asdaseqwr4wer6e565wqedsz");
+const count = countDigits("a1sdaseqwr4wer6e565wqedsz");
 console.log(count);
 
 /*A-TASK: 
