@@ -1,23 +1,74 @@
-// B task
+// C task
 
-function countDigits(x) {
-  let count = 0;
+const moment = require("moment");
 
-  for (let i = 0; i < x.length; i++) {
-    // if (x[i] >= "0" && x[i] <= "9") {
-    //   count++;
-    // }
+class Shop {
+  // state
+  non;
+  ramen;
+  cyder;
 
-    if (x[i] >= 0 && x[i] <= 9) {
-      count++;
+  constructor(non, ramen, cyder) {
+    this.non = non;
+    this.ramen = ramen;
+    this.cyder = cyder;
+  }
+
+  qoldiq() {
+    console.log(
+      `${moment().format("LT")}da ${this.non} non, ${this.ramen} ramen, ${
+        this.cyder
+      } cyder bor`
+    );
+  }
+
+  sotish(addItem, amountItem) {
+    if (addItem === "non") {
+      this.non -= amountItem;
+    } else if (addItem === "ramen") {
+      this.ramen -= amountItem;
+    } else if (addItem === "cyder") {
+      this.cyder -= amountItem;
     }
   }
 
-  return count;
+  qabul(receiveItem, amountItem) {
+    if (receiveItem === "non") {
+      this.non += amountItem;
+    } else if (receiveItem === "ramen") {
+      this.ramen += amountItem;
+    } else if (receiveItem === "cyder") {
+      this.cyder += amountItem;
+    }
+  }
 }
 
-const count = countDigits("a1sdaseqwr4wer6e565wqedsz");
-console.log(count);
+const shop1 = new Shop(100, 100, 100);
+
+shop1.sotish('non', 3);
+shop1.qabul('cyder', 4);
+shop1.qoldiq()
+
+// B task
+
+// function countDigits(x) {
+//   let count = 0;
+
+//   for (let i = 0; i < x.length; i++) {
+//     // if (x[i] >= "0" && x[i] <= "9") {
+//     //   count++;
+//     // }
+
+//     if (x[i] >= 0 && x[i] <= 9) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// const count = countDigits("a1sdaseqwr4wer6e565wqedsz");
+// console.log(count);
 
 /*A-TASK: 
 
