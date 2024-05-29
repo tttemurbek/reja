@@ -1,53 +1,70 @@
-// C task
+// D task
 
-const moment = require("moment");
+const { checkCollectionName } = require("mongodb/lib/utils");
 
-class Shop {
-  // state
-  non;
-  ramen;
-  cyder;
-
-  constructor(non, ramen, cyder) {
-    this.non = non;
-    this.ramen = ramen;
-    this.cyder = cyder;
-  }
-
-  qoldiq() {
-    console.log(
-      `${moment().format("LT")}da ${this.non} non, ${this.ramen} ramen, ${
-        this.cyder
-      } cyder bor`
-    );
-  }
-
-  sotish(addItem, amountItem) {
-    if (addItem === "non") {
-      this.non -= amountItem;
-    } else if (addItem === "ramen") {
-      this.ramen -= amountItem;
-    } else if (addItem === "cyder") {
-      this.cyder -= amountItem;
-    }
-  }
-
-  qabul(receiveItem, amountItem) {
-    if (receiveItem === "non") {
-      this.non += amountItem;
-    } else if (receiveItem === "ramen") {
-      this.ramen += amountItem;
-    } else if (receiveItem === "cyder") {
-      this.cyder += amountItem;
-    }
+function checkContent(x, y) {
+  let first = x.split("").sort().join("");
+  let second = y.split("").sort().join("");
+  if (first === second) {
+    return true;
+  } else {
+    console.log("Please try again");
   }
 }
 
-const shop1 = new Shop(100, 100, 100);
+let result = checkContent("mit", "tim");
+console.log(result);
 
-shop1.sotish('non', 3);
-shop1.qabul('cyder', 4);
-shop1.qoldiq()
+// C task
+
+// const moment = require("moment");
+
+// class Shop {
+//   // state
+//   non;
+//   ramen;
+//   cyder;
+
+//   constructor(non, ramen, cyder) {
+//     this.non = non;
+//     this.ramen = ramen;
+//     this.cyder = cyder;
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       `${moment().format("LT")}da ${this.non} non, ${this.ramen} ramen, ${
+//         this.cyder
+//       } cyder bor`
+//     );
+//   }
+
+//   sotish(addItem, amountItem) {
+//     if (addItem === "non") {
+//       this.non -= amountItem;
+//     } else if (addItem === "ramen") {
+//       this.ramen -= amountItem;
+//     } else if (addItem === "cyder") {
+//       this.cyder -= amountItem;
+//     }
+//   }
+
+//   qabul(receiveItem, amountItem) {
+//     if (receiveItem === "non") {
+//       this.non += amountItem;
+//     } else if (receiveItem === "ramen") {
+//       this.ramen += amountItem;
+//     } else if (receiveItem === "cyder") {
+//       this.cyder += amountItem;
+//     }
+//   }
+// }
+
+// const shop1 = new Shop(100, 100, 100);
+
+// shop1.sotish('non', 3);
+// shop1.qabul('cyder', 4);
+// shop1.qoldiq()
 
 // B task
 
