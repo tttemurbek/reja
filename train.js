@@ -1,19 +1,33 @@
+// E task
+
+/* E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+
+@MITASK */
+
+function getReverse(x) {
+  return x.split("").reverse().join("");
+}
+console.log(getReverse("hello"));
+
 // D task
 
-const { checkCollectionName } = require("mongodb/lib/utils");
+// const { checkCollectionName } = require("mongodb/lib/utils");
 
-function checkContent(x, y) {
-  let first = x.split("").sort().join("");
-  let second = y.split("").sort().join("");
-  if (first === second) {
-    return true;
-  } else {
-    console.log("Please try again");
-  }
-}
+// function checkContent(x, y) {
+//   let first = x.split("").sort().join("");
+//   let second = y.split("").sort().join("");
+//   if (first === second) {
+//     return true;
+//   } else {
+//     console.log("Please try again");
+//   }
+// }
 
-let result = checkContent("mit", "tim");
-console.log(result);
+// let result = checkContent("mit", "tim");
+// console.log(result);
 
 // C task
 
