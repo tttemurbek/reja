@@ -28,6 +28,21 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: routing codes
+app.get("/", function (req, res) {
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Something went wrong");
+      } else {
+        // console.log(data);
+        res.render("reja", { items: data });
+      }
+    });
+});
+
 app.post("/create-item", (req, res) => {
   console.log("user entered /create-item");
   console.log(req.body);
@@ -74,19 +89,6 @@ app.post("/delete-all", (req, res) => {
   }
 });
 
-app.get("/", function (req, res) {
-  console.log("user entered /");
-  db.collection("plans")
-    .find()
-    .toArray((err, data) => {
-      if (err) {
-        console.log(err);
-        res.end("Something went wrong");
-      } else {
-        // console.log(data);
-        res.render("reja", { items: data });
-      }
-    });
-});
+
 
 module.exports = app;
