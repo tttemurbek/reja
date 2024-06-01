@@ -1,3 +1,26 @@
+/*F-TASK: 
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+MASALAN: getReverse("hello") return true return qiladi
+
+@MITASK
+
+*/
+
+function findDoublers(x) {
+  let newString = x.split("").sort().join("");
+
+  for (let i = 0; i < x.length; i++) {
+    if (newString[i] === newString[i + 1]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+console.log(findDoublers("hello"));
+
 // E task
 
 /* E-TASK: 
@@ -7,10 +30,10 @@ MASALAN: getReverse("hello") return qilsin "olleh"
 
 @MITASK */
 
-function getReverse(x) {
-  return x.split("").reverse().join("");
-}
-console.log(getReverse("hello"));
+// function getReverse(x) {
+//   return x.split("").reverse().join("");
+// }
+// console.log(getReverse("hello"));
 
 // D task
 
