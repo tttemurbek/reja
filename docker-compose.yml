@@ -1,0 +1,17 @@
+services:
+  node:
+    container_name: reja
+    restart: always
+    image: tttemurbek/reja-image:tagname
+    ports:
+      - 3003:3000
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    networks:
+      - reja-network
+    command: bash -c "npm install && npm run dev"
+
+networks:
+  reja-network:
+    driver: bridge
